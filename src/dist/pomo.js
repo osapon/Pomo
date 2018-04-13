@@ -854,8 +854,8 @@ var Pomo = function () {
             var entry = me.storage.contents[domain][escaped];
             if (!!context) {
                 for (var i = 0, j = entry.length; i < j; i++) {
-                    if (entry.context && entry.context === context) {
-                        translation = entry[i];
+                    if (entry[i].context && entry[i].context === context) {
+                        entry = entry[i];
                         break;
                     }
                 }
